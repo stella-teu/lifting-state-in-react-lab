@@ -4,7 +4,7 @@ const BurgerStack = (props) => {
         props.removeFromBurger(ingredient);
     }
 
-    return <ul>{props.stack.map( (ingredient, index) => (
+    return <ul>{props.stack.length === 0 ? "No Ingredients" : props.stack.map( (ingredient, index) => (
         <li style={{backgroundColor: ingredient.color}}key={index}>
             {ingredient.name}
             <button style={{color: "white"}}
